@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import env from "react-dotenv";
 import Current from './Current';
 import TodayForecast from './TodayForecast';
 import WeekForecast from './WeekForecast';
@@ -23,7 +24,8 @@ export default class Weather extends Component {
   }
 
   getData = _ => {
-    const forecastUrl = "https://api.weatherapi.com/v1/forecast.json?key=b35ea571ca444994a40125752232409&q=salé&days=5&aqi=no&alerts=yes";
+    const apiKey = env.REACT_APP_WEATHER_API_KEY; // b35ea571ca444994a40125752232409
+    const forecastUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=salé&days=5&aqi=no&alerts=yes`;
     const now = new Date();
 
     fetch(forecastUrl)
