@@ -1,0 +1,79 @@
+/* Fonts Imports */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --body-background-image: url('../images/background.jpg');
+}
+
+.beautiful-blur {
+  backdrop-filter:blur(6px);
+  background-color:#ffffff0f
+}
+
+body {
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-image:var(--body-background-image);
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  font-family: 'Poppins';
+}
+
+body .blur {
+  backdrop-filter:blur(8px);
+}
+
+body .weather {
+  height:calc(100vh - 100px);
+  background-color:var(--bs-dark);
+  background-image: var(--body-background-image);
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-blend-mode:soft-light;
+  padding:100px;
+}
+
+body .weather .current {
+  flex-wrap:wrap;
+}
+
+body .weather .current .temperature-degree {
+  font-size:90px;
+}
+
+body .weather .current .temperature-degree>sup {
+  font-size:25px;
+  vertical-align: super;
+}
+
+body .weather .current .location-city {
+  font-size:50px;
+}
+
+body .weather .week-day {
+  font-size:1.1em;
+}
+
+body .weather .week-day .day-name {
+  width:15%;
+}
+
+body .weather .week-day .day-night {
+  width:28%;
+  height:3px;
+}
+
+body .weather .week-day .day-night .day-night-status {
+  /* width:4.16666666666667% */
+  width:calc(100% / 24);
+}
+
+/* body .weather .week-day .day-night .night {
+  width:
+} */
