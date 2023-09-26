@@ -24,7 +24,7 @@ export default class Weather extends Component {
   }
 
   getData = _ => {
-    const apiKey = env.REACT_APP_WEATHER_API_KEY; // b35ea571ca444994a40125752232409
+    const apiKey = env.REACT_APP_WEATHER_API_KEY;
     const forecastUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=salé&days=5&aqi=no&alerts=yes`;
     const now = new Date();
 
