@@ -3,5 +3,30 @@
     {
       "name": ""
     }
-  ]
+  ],
+  "temperature": {
+    "status": {
+      "very cold sake": {
+        "color": "#ecf0f1"
+      },
+      "very cold": {
+        "color": "#6cb5e5"
+      },
+      "cold": {
+        "color": "#3498db"
+      },
+      "normal": {
+        "color": "#2ecc71"
+      },
+      "hot": {
+        "color": "#f1c40f"
+      },
+      "very hot": {
+        "color": "#f39c12"
+      },
+      "very hot sake": {
+        "color": "#d35400"
+      }
+    }
+  }
 }
