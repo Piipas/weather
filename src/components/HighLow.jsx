@@ -20,7 +20,7 @@ export default class HighLow extends Component {
     const timeHour = String(this.state.time.getHours()).padStart(2, '0');
     const timeMinutes = String(this.state.time.getMinutes()).padStart(2, '0');
     const numTime = `${timeHour}:${timeMinutes}`;
-    const title = `${time} - ${this.state.hourTemp}°C`;
+    const title = `${String(time.getHours()).padStart(2, "0")}:${String(time.getMinutes()).padStart(2, "0")} - ${this.state.hourTemp}°C`;
     let status;
     // const status = this.state.hourTemp > (this.state.dayMaxTemp - ((this.state.dayMaxTemp - this.state.dayMinTemp) / 2)) ? "high" : "low";
     if (hourTemp > 40) {
