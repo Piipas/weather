@@ -63,11 +63,14 @@ body .weather .week-day .day-name {
 body .weather .week-day .day-night {
   width:28%;
   height:3px;
-  background-image:linear-gradient(90deg, #d35400 50%, #f1c40f);
 }
 
 body .weather .week-day .day-night .day-night-status {
   width:calc(100% / 24);
+}
+
+body .weather .week-day .day-night .day-night-status:hover {
+  background-color:var(--bs-light)!important;
 }
 
 body .weather .search input, body .weather .search span {
