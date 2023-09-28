@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import env from "react-dotenv";
 import Current from './Current';
 import TodayForecast from './TodayForecast';
 import WeekForecast from './WeekForecast';
 import Search from './Search';
 import Suggestion from './Suggestion';
 import cities from 'cities.json';
+
+import config from '../json/config.json';
 
 export default class Weather extends Component {
   constructor() {
@@ -28,7 +29,7 @@ export default class Weather extends Component {
   }
 
   getData = _ => {
-    const apiKey = env.REACT_APP_WEATHER_API_KEY;
+    const apiKey = config.key;
     const cookieLocation = document.cookie.split(";").find(c => c.startsWith("__current_location="))?.split("=")[1];
     console.log(cookieLocation)
     const location = cookieLocation ? `${JSON.parse(cookieLocation).lat},${JSON.parse(cookieLocation).lng}` : this.state.locationCredentials;
