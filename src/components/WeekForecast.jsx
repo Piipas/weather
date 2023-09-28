@@ -15,7 +15,7 @@ export default class WeekForcast extends Component {
       <div className="beautiful-blur w-100 p-4 rounded-4">
         <div>5-Day Forecast</div>
         <hr />
-        {days.map((day, index) => <Day day={day} key={index} />)}
+        {days.map((day, index) => <Day day={day} today={index === 0 ? true : false} key={index} />)}
       </div>
     )
   }

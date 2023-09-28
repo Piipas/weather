@@ -6,6 +6,7 @@ export default class Day extends Component {
     super(props);
     this.state = {
       day: this.props.day,
+      isToday: this.props.today,
       dayCondition: [],
       dayMinTemp: "",
       dayMaxTemp: "",
@@ -26,10 +27,10 @@ export default class Day extends Component {
   }
 
   render() {
-    const { dayCondition, dayMinTemp, dayMaxTemp, dayHours, dayName } = this.state;
+    const { dayCondition, dayMinTemp, dayMaxTemp, dayHours, dayName, isToday } = this.state;
     return (
       <div className="week-day d-flex align-items-center justify-content-between">
-        <div className="day-name fw-semibold">{dayName}</div>
+        <div className="day-name fw-semibold">{isToday ? "Today" : dayName}</div>
         <div className="condition-icon mx-3">
           <img src={dayCondition.icon} alt={dayCondition.text} />
         </div>
